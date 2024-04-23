@@ -1,0 +1,14 @@
+class Category(val name: String?) {
+
+    fun isValid(): Boolean {
+        return name != null
+    }
+}
+
+fun main() {
+    val category1 = Category("Books")
+    val category2 = Category(null)
+
+    println("Category1: ${if (category1.isValid()) category1.name else "No name"}")
+    println("Category2: ${if (category2.isValid()) category2.name else "No name"}")
+}
